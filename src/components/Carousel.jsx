@@ -14,17 +14,17 @@ const categories = [
   {
     name: "Shoes",
     link: "https://www.impericon.com/collections/shoes/",
-    image: "/shirt.webp",
+    image: "/shoes.webp",
   },
   {
     name: "Shorts",
     link: "https://www.impericon.com/collections/shorts/",
-    image: "/shirt.webp",
+    image: "/shorts.webp",
   },
   {
     name: "Jackets",
     link: "https://www.impericon.com/collections/jackets/",
-    image: "/shirt.webp",
+    image: "/jackets.webp",
   },
 ];
 
