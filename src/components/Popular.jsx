@@ -86,7 +86,7 @@ const logos = [
 
 const Popular = () => {
   return (
-    <div className="bg-gray-100 p-8 mt-20">
+    <div className="bg-gray-100 px-20 py-20">
       <div className="container mx-auto">
         <header className="text-center mb-8">
           <h3 className="text-4xl font-medium">Most Popular</h3>

@@ -4,6 +4,7 @@ import Carousel from "@/components/Carousel";
 import React from "react";
 import Popular from "@/components/Popular";
 import Footer from "@/components/Footer";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Carousel />
       <Popular />
+      <NewsletterSubscription />
       <Footer />
     </>
   );
