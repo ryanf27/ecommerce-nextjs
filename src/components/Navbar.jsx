@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { CiSearch, CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -23,7 +24,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="flex items-center justify-around px-4 py-6">
+      <div className="flex items-center justify-around px-4 py-2">
         <div className="relative flex items-center">
           <CiSearch className="absolute left-3 w-5 h-5 text-gray-400" />
           <input
@@ -32,9 +33,16 @@ const Navbar = () => {
             placeholder="Search..."
           />
         </div>
-        <h2 className="text-xl font-bold ml-4">
-          <Link href="/">Anarchy Apparel</Link>
-        </h2>
+        <div className="ml-4">
+          <Link href="/">
+            <Image
+              src={"/anarchy.png"}
+              width={220}
+              height={180}
+              alt="logo"
+            ></Image>
+          </Link>
+        </div>
       </div>
       <div className="flex justify-center text-center px-4 py-2 border-t-2 border-gray-200 w-4/5 mx-auto">
         <ul className="flex space-x-4">
