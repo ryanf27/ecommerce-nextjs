@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ selectedCategory }) => {
   return (
     <div className="py-4 bg-white shadow">
       <div className="container mx-auto px-4">
@@ -17,7 +17,7 @@ const Breadcrumb = () => {
             <li className="mx-2">/</li>
             <li className="breadcrumb-item">
               <span aria-current="page" className="text-gray-500">
-                Clothing
+                {selectedCategory}
               </span>
             </li>
           </ol>
@@ -31,7 +31,9 @@ const Breadcrumb = () => {
             </li>
           </ol>
         </nav>
-        <h1 className="mt-2 text-2xl text-gray-800 font-bold">Clothing</h1>
+        <h1 className="mt-2 text-2xl text-gray-800 font-bold">
+          {selectedCategory}
+        </h1>
       </div>
     </div>
   );

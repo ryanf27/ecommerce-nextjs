@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -102,8 +104,9 @@ const Popular = () => {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: "contain" }}
                   className="transition-transform duration-200 group-hover:scale-105"
                 />
               </div>

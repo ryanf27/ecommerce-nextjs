@@ -49,7 +49,7 @@ const Carousel = () => {
         <div className="relative">
           <button
             onClick={prevCategory}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
           >
             <FaChevronLeft />
           </button>
@@ -60,13 +60,15 @@ const Carousel = () => {
                 .map((category, index) => (
                   <Link key={index} href={category.link}>
                     <div className="cursor-pointer">
-                      <Image
-                        src={category.image}
-                        alt={category.name}
-                        width={570}
-                        height={570}
-                        className="w-full h-auto max-w-xs"
-                      />
+                      <div className="w-61 h-62 relative">
+                        <Image
+                          src={category.image}
+                          alt={category.name}
+                          width={340}
+                          height={340}
+                          className="rounded-md"
+                        />
+                      </div>
                       <div className="text-center mt-2">
                         <p className="text-lg font-bold">{category.name}</p>
                       </div>
@@ -77,7 +79,7 @@ const Carousel = () => {
           </div>
           <button
             onClick={nextCategory}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
           >
             <FaChevronRight />
           </button>
