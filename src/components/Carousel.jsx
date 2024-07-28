@@ -8,22 +8,22 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const categories = [
   {
     name: "T-Shirts",
-    link: "https://www.impericon.com/collections/t-shirts/",
+    link: "clothing",
     image: "/shirt.webp",
   },
   {
     name: "Shoes",
-    link: "https://www.impericon.com/collections/shoes/",
+    link: "shoes",
     image: "/shoes.webp",
   },
   {
     name: "Shorts",
-    link: "https://www.impericon.com/collections/shorts/",
+    link: "jeans",
     image: "/shorts.webp",
   },
   {
     name: "Jackets",
-    link: "https://www.impericon.com/collections/jackets/",
+    link: "hoodie",
     image: "/jackets.webp",
   },
 ];
@@ -58,7 +58,7 @@ const Carousel = () => {
               {categories
                 .slice(currentIndex, currentIndex + 4)
                 .map((category, index) => (
-                  <Link key={index} href={category.link}>
+                  <Link key={index} href={`/collection/${category.link}`}>
                     <div className="cursor-pointer">
                       <div className="w-61 h-62 relative">
                         <Image

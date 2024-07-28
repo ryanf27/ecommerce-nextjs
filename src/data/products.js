@@ -5,6 +5,14 @@ const products = [
     category: "Clothing",
     price: "€19.99",
     imageUrl: "/blink_shirt.webp",
+    images: ["/blink_shirt.webp", "/blink_shirt_2.webp"],
+    description: "This is a description of the Blink 182 T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 2,
@@ -12,6 +20,18 @@ const products = [
     category: "Clothing",
     price: "€39.99",
     imageUrl: "/blink_shirt_2.webp",
+    images: [
+      "/blink_shirt_2.webp",
+      "/blink_shirt_2.webp",
+      "/blink_shirt_2.webp",
+    ],
+    description: "This is a description of the Blink 182 T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 3,
@@ -19,6 +39,14 @@ const products = [
     category: "Hoodie",
     price: "€19.99",
     imageUrl: "/blink_shirt_3.webp",
+    images: ["/blink_shirt_3.webp", "/blink_shirt_3.webp"],
+    description: "This is a description of the Blink 182 Hoodie.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 4,
@@ -26,6 +54,14 @@ const products = [
     category: "Clothing",
     price: "€39.99",
     imageUrl: "/inflames_shirt.webp",
+    images: ["/inflames_shirt.webp", "/inflames_shirt.webp"],
+    description: "This is a description of the In Flames T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 5,
@@ -33,6 +69,14 @@ const products = [
     category: "Clothing",
     price: "€39.99",
     imageUrl: "/inflames_shirt_2.webp",
+    images: ["/inflames_shirt_2.webp", "/inflames_shirt_2.webp"],
+    description: "This is a description of the In Flames T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 6,
@@ -40,6 +84,14 @@ const products = [
     category: "Hoodie",
     price: "€39.99",
     imageUrl: "/inflames_shirt_3.webp",
+    images: ["/inflames_shirt_3.webp", "/inflames_shirt_3.webp"],
+    description: "This is a description of the In Flames Hoodie.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 7,
@@ -47,6 +99,14 @@ const products = [
     category: "Clothing",
     price: "€49.99",
     imageUrl: "/metallica_shirt.webp",
+    images: ["/metallica_shirt.webp", "/metallica_shirt.webp"],
+    description: "This is a description of the Metallica T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 8,
@@ -54,6 +114,14 @@ const products = [
     category: "Clothing",
     price: "€59.99",
     imageUrl: "/slipknot_shirt.webp",
+    images: ["/slipknot_shirt.webp", "/slipknot_shirt.webp"],
+    description: "This is a description of the Slipknot T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 9,
@@ -61,6 +129,14 @@ const products = [
     category: "Clothing",
     price: "€79.99",
     imageUrl: "/slipknot_shirt_2.webp",
+    images: ["/slipknot_shirt_2.webp"],
+    description: "This is a description of the Slipknot T-shirt.",
+    variants: [
+      { id: "111", size: "S" },
+      { id: "222", size: "M" },
+      { id: "333", size: "L" },
+      { id: "444", size: "XL" },
+    ],
   },
   {
     id: 10,
@@ -68,6 +144,9 @@ const products = [
     category: "Vinyl",
     price: "€19.99",
     imageUrl: "/beartooth.webp",
+    images: ["/beartooth.webp"],
+    description: "This is a description of the Beartooth Vinyl Record.",
+    variants: [],
   },
   {
     id: 11,
@@ -75,6 +154,9 @@ const products = [
     category: "Vinyl",
     price: "€9.99",
     imageUrl: "/metallica-vinyl.webp",
+    images: ["/metallica-vinyl.webp"],
+    description: "This is a description of the Metallica Vinyl Record.",
+    variants: [],
   },
   {
     id: 12,
@@ -82,6 +164,9 @@ const products = [
     category: "Accessories",
     price: "€14.99",
     imageUrl: "/patch-lorna.webp",
+    images: ["/patch-lorna.webp"],
+    description: "This is a description of the Lorna Shore Patch.",
+    variants: [],
   },
   {
     id: 13,
@@ -89,6 +174,9 @@ const products = [
     category: "Accessories",
     price: "€24.99",
     imageUrl: "/bmth.webp",
+    images: ["/bmth.webp"],
+    description: "This is a description of the Bring me the horizon Patch.",
+    variants: [],
   },
   {
     id: 14,
@@ -96,6 +184,9 @@ const products = [
     category: "Accessories",
     price: "€15.99",
     imageUrl: "/miw-bag.webp",
+    images: ["/miw-bag.webp"],
+    description: "This is a description of the Motionless in White Tote bag.",
+    variants: [],
   },
   {
     id: 15,
@@ -103,6 +194,14 @@ const products = [
     category: "Shoes",
     price: "€29.99",
     imageUrl: "/dr.martens_shoes.webp",
+    images: ["/dr.martens_shoes.webp"],
+    description: "This is a description of the dr.martens shoes.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 16,
@@ -110,6 +209,14 @@ const products = [
     category: "Shoes",
     price: "€9.99",
     imageUrl: "/sandals_sleep_token.webp",
+    images: ["/sandals_sleep_token.webp"],
+    description: "This is a description of the Sleep Token Sandals.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 17,
@@ -117,6 +224,14 @@ const products = [
     category: "Shoes",
     price: "€89.99",
     imageUrl: "/altercore.webp",
+    images: ["/altercore.webp"],
+    description: "This is a description of the Altercore Shoes.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 18,
@@ -124,6 +239,14 @@ const products = [
     category: "Jeans",
     price: "€34.99",
     imageUrl: "/jeans_1.webp",
+    images: ["/jeans_1.webp"],
+    description: "This is a description of the Jeans.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 19,
@@ -131,6 +254,14 @@ const products = [
     category: "Jeans",
     price: "€19.99",
     imageUrl: "/jeans_2.webp",
+    images: ["/jeans_2.webp"],
+    description: "This is a description of the Jeans.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
   {
     id: 20,
@@ -138,6 +269,14 @@ const products = [
     category: "Accessories",
     price: "€12.99",
     imageUrl: "/beanie_1.webp",
+    images: ["/beanie_1.webp"],
+    description: "This is a description of the Beanie.",
+    variants: [
+      { id: "555", size: "S" },
+      { id: "666", size: "M" },
+      { id: "777", size: "L" },
+      { id: "888", size: "XL" },
+    ],
   },
 ];
 

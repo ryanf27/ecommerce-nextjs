@@ -7,13 +7,13 @@ import Image from "next/image";
 
 const Navbar = () => {
   const categories = [
-    "hoodie",
-    "clothing",
-    "shoes",
-    "vinyl",
-    "jeans",
-    "more",
-    "all",
+    "Hoodie",
+    "Clothing",
+    "Shoes",
+    "Vinyl",
+    "Jeans",
+    "More",
+    "All",
   ];
 
   return (
