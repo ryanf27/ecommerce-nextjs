@@ -5,14 +5,15 @@ import Link from "next/link";
 import { CiSearch, CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 import Image from "next/image";
 
-const Navbar = ({ onCategoryChange }) => {
+const Navbar = () => {
   const categories = [
-    "Hoodie",
-    "Clothing",
-    "Shoes",
-    "Vinyl & CDs",
-    "Jeans",
-    "More",
+    "hoodie",
+    "clothing",
+    "shoes",
+    "vinyl",
+    "jeans",
+    "more",
+    "all",
   ];
 
   return (
@@ -54,9 +55,9 @@ const Navbar = ({ onCategoryChange }) => {
         <ul className="flex space-x-4">
           {categories.map((category) => (
             <li key={category} className="group relative hover:text-gray-400">
-              <button onClick={() => onCategoryChange(category)}>
-                {category}
-              </button>
+              <Link href={`/collection/${category}`}>
+                <button>{category}</button>
+              </Link>
 
               {category === "More" && (
                 <div className="absolute hidden group-hover:block bg-gray-500 p-4 mt-2 space-y-2 rounded shadow-lg">

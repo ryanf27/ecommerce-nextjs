@@ -48,7 +48,6 @@ const Page = ({ params }) => {
 
   return (
     <>
-      <Navbar />
       <div className="container mx-auto px-4 py-8">
         <Breadcrumb />
         <div className="flex justify-between items-end mb-4">
@@ -56,8 +55,6 @@ const Page = ({ params }) => {
         </div>
         <ProductList products={products} />
       </div>
-      <NewsletterSubscription />
-      <Footer />
     </>
   );
 };

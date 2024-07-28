@@ -65,14 +65,14 @@ const products = [
   {
     id: 10,
     name: "Beartooth Vinyl Record",
-    category: "Vinyl & CDs",
+    category: "Vinyl",
     price: "€19.99",
     imageUrl: "/beartooth.webp",
   },
   {
     id: 11,
     name: "Metallica Vinyl Record",
-    category: "Vinyl & CDs",
+    category: "Vinyl",
     price: "€9.99",
     imageUrl: "/metallica-vinyl.webp",
   },
