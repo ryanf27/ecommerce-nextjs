@@ -18,6 +18,18 @@ const cartReducer = (state, action) => {
         return [...state, { id, name, price, image, quantity: 1 }];
       }
     }
+    case "REMOVE_FROM_CART": {
+      const { id } = action.payload;
+      return state.filter((item) => item.id !== id);
+    }
+    case "DECREASE_FROM_CART": {
+      const { id } = action.payload;
+      return state.map((item) =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
+    }
     default:
       return state;
   }

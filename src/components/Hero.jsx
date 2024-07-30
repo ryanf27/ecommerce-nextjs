@@ -15,7 +15,7 @@ const Hero = () => {
         <p className="text-lg md:text-2xl mb-8 text-shadow-md">
           Discover the latest trends in fashion and music.
         </p>
-        <Link href="/shop">
+        <Link href="/collection/All">
           <p className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
             Shop Now
           </p>

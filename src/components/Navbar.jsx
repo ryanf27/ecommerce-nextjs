@@ -8,7 +8,7 @@ import { useCart } from "@/app/context/CartContext";
 import CartModal from "@/components/CartModal";
 
 const Navbar = () => {
-  const { cart } = useCart();
+  const { cart, dispatch } = useCart();
   const categories = ["All", "Hoodie", "Clothing", "Shoes", "Vinyl", "Jeans"];
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -76,6 +76,7 @@ const Navbar = () => {
         isOpen={isCartOpen}
         onClose={toggleCartModal}
         cartItems={cart}
+        dispatch={dispatch}
       />
     </nav>
   );
