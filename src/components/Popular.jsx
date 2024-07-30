@@ -115,7 +115,7 @@ const Popular = () => {
         </div>
         <div className="text-center mt-8">
           <a
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-200"
+            className="bg-[#611122] text-white px-4 py-2 rounded hover:bg-[#8b2b3d] transition-colors duration-200"
             href="/pages/bands-brands"
           >
             View all

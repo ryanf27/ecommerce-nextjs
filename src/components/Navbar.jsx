@@ -1,20 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { CiSearch, CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 import Image from "next/image";
+import { useCart } from "@/app/context/CartContext";
+import CartModal from "@/components/CartModal";
 
 const Navbar = () => {
-  const categories = [
-    "Hoodie",
-    "Clothing",
-    "Shoes",
-    "Vinyl",
-    "Jeans",
-    "More",
-    "All",
-  ];
+  const { cart } = useCart();
+  const categories = ["All", "Hoodie", "Clothing", "Shoes", "Vinyl", "Jeans"];
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCartModal = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   return (
     <nav className="bg-stone-950 text-white">
@@ -25,13 +25,23 @@ const Navbar = () => {
           <li>All</li>
         </ul>
         <div className="flex items-center space-x-4">
-          <Link href="/wishlist">
+          <Link href="/wishlist" className="flex items-center">
             <CiHeart className="w-6 h-6 hover:text-gray-400 cursor-pointer" />
           </Link>
-          <Link href="/cart">
-            <CiShoppingCart className="w-6 h-6 hover:text-gray-400 cursor-pointer" />
-          </Link>
-          <Link href="/user">
+          <div className="relative flex items-center">
+            <button
+              onClick={toggleCartModal}
+              className="relative flex items-center"
+            >
+              <CiShoppingCart className="w-6 h-6 hover:text-gray-400 cursor-pointer" />
+              {cart.length > 0 && (
+                <span className="absolute -top-2 -right-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                  {cart.length}
+                </span>
+              )}
+            </button>
+          </div>
+          <Link href="/user" className="flex items-center">
             <CiUser className="w-6 h-6 hover:text-gray-400 cursor-pointer" />
           </Link>
         </div>
@@ -58,24 +68,15 @@ const Navbar = () => {
               <Link href={`/collection/${category}`}>
                 <button>{category}</button>
               </Link>
-
-              {category === "More" && (
-                <div className="absolute hidden group-hover:block bg-gray-500 p-4 mt-2 space-y-2 rounded shadow-lg">
-                  <button onClick={() => onCategoryChange("Entertainment")}>
-                    <p className="block hover:text-gray-400">Entertainment</p>
-                  </button>
-                  <button onClick={() => onCategoryChange("Collectibles")}>
-                    <p className="block hover:text-gray-400">Collectibles</p>
-                  </button>
-                  <button onClick={() => onCategoryChange("Home Decor")}>
-                    <p className="block hover:text-gray-400">Home Decor</p>
-                  </button>
-                </div>
-              )}
             </li>
           ))}
         </ul>
       </div>
+      <CartModal
+        isOpen={isCartOpen}
+        onClose={toggleCartModal}
+        cartItems={cart}
+      />
     </nav>
   );
 };

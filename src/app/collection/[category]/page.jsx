@@ -10,8 +10,7 @@ const Page = ({ params }) => {
   const { category } = params;
   const memoizedInitialProducts = useMemo(() => productsData, []);
   const [products, setProducts] = useState(memoizedInitialProducts);
-  const [sortOrder, setSortOrder] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(category || "all");
+  const [selectedCategory, setSelectedCategory] = useState(category || "All");
 
   const handleSortChange = useCallback(
     (sortType) => {
@@ -34,7 +33,6 @@ const Page = ({ params }) => {
           break;
       }
       setProducts(sortedProducts);
-      setSortOrder(sortType);
     },
     [products]
   );
@@ -46,7 +44,7 @@ const Page = ({ params }) => {
   }, [category, selectedCategory]);
 
   useEffect(() => {
-    if (selectedCategory === "all") {
+    if (selectedCategory === "All") {
       setProducts(memoizedInitialProducts);
     } else {
       const filteredProducts = memoizedInitialProducts.filter(
@@ -58,15 +56,13 @@ const Page = ({ params }) => {
   }, [selectedCategory, memoizedInitialProducts]);
 
   return (
-    <>
-      <div className="container mx-auto px-4 py-8">
-        <Breadcrumb selectedCategory={selectedCategory} />
-        <div className="flex justify-between items-end mb-4">
-          <SortPopover onSortChange={handleSortChange} />
-        </div>
-        <ProductList products={products} />
+    <div className="container mx-auto px-4 py-8">
+      <Breadcrumb selectedCategory={selectedCategory} />
+      <div className="flex justify-between items-end mb-4">
+        <SortPopover onSortChange={handleSortChange} />
       </div>
-    </>
+      <ProductList products={products} />
+    </div>
   );
 };
 

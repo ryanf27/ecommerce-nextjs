@@ -263,21 +263,6 @@ const products = [
       { id: "888", size: "XL" },
     ],
   },
-  {
-    id: 20,
-    name: "Beanie",
-    category: "Accessories",
-    price: "€12.99",
-    imageUrl: "/beanie_1.webp",
-    images: ["/beanie_1.webp"],
-    description: "This is a description of the Beanie.",
-    variants: [
-      { id: "555", size: "S" },
-      { id: "666", size: "M" },
-      { id: "777", size: "L" },
-      { id: "888", size: "XL" },
-    ],
-  },
 ];
 
 export default products;
